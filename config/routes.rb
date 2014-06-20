@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    root to: "base#index"
-    resources :users do
-      resources :permissions
-
-      put "permissions", to: "permissions#set", as: "set_permissions"
-    end
-  end
 
   root 'projects#index'
 
@@ -18,6 +10,17 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :tickets
+  end
+
+  resources :files
+
+    namespace :admin do
+    root to: "base#index"
+    resources :users do
+      resources :permissions
+
+      put "permissions", to: "permissions#set", as: "set_permissions"
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
