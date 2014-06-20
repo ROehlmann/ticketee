@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'cancan', '~> 1.6.10'
+gem 'carrierwave', '~> 0.10.0'
 
 group :development, :test do
   gem 'spring-commands-rspec'
